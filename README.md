@@ -6,15 +6,15 @@ Liquan Chai, Siyao Zhou, Shuxian Liang
 **Related Libs (Python-based):**
 
 1. nltk
-* Install nltk by:
+* Install nltk by: 
 	*`conda install nltk` or `pip install nltk`*
 	
 * Then, run codes as followed (In Terminal - (Conda Environment)):
-	* `python` *
-	* `>>> import nltk` *
-	* `>>> nltk.download()`*
+	1. `python`
+	1. `>>> import nltk`
+	1. `>>> nltk.download()`
 
 2. Cython (For better performance)
-* Install cython by:
-	*`conda install cython` or `pip install cython` *
+* Install cython by: 
+	*`conda install cython` or `pip install cython`*
 
