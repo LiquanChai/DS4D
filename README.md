@@ -9,8 +9,10 @@ Liquan Chai, Siyao Zhou, Shuxian Liang
 * Install nltk by:
 	`'conda install nltk'` or
 	`'pip install nltk'`
+	
 * Then, run codes as followed (In Terminal - (Conda Environment)):
-	`'python'` \n
+	`'python'` 
+	
 	`'>>> import nltk'` or
 	`'>>> nltk.download()'`
 
