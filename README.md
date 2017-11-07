@@ -1,10 +1,10 @@
 # Group Coursework - Data Science For Design (DS4D) - University Of Edinburgh
 
-**Team Members:**
+### Team Members:
 
 Liquan Chai, Siyao Zhou, Shuxian Liang
 
-**Related Libs (Python-based):**
+### Related Libs (Python-based):
 
 **1. nltk**
 * Install nltk by: 
@@ -19,7 +19,7 @@ Liquan Chai, Siyao Zhou, Shuxian Liang
 * Install cython by: 
 	*`conda install cython` or `pip install cython`*
 
-**3. Programme Structure**
+### Programme Structure
 ```
 .
 ├── DS4D
