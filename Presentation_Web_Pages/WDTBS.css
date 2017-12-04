@@ -1,0 +1,779 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: sans-serif;
+
+    overflow: hidden;
+}
+
+.row1{
+    width: 100%;
+}
+.slide{
+    overflow: hidden;
+    width: 100%;
+}
+
+
+@font-face{
+    font-family: studio;
+    src:url('things/Studio-Gothic-ExtraBold-Italic.ttf');
+}
+@font-face{
+    font-family: governor;
+    src:url('things/governor.ttf');
+}
+
+@font-face{
+    font-family: arista;
+    src:url('things/Arista-Pro-Fat.ttf');
+}
+
+/* --------------------------------------------------Cover--------------------------------------------------*/
+#cover{
+    position: relative;
+    background-color: rgb(73,173,233); /* #49ade9 */
+    overflow: hidden;
+
+}
+#cover #cover-container{
+    height: 100%;
+}
+#cover h1,#cover h2{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    display: none;
+}
+#cover h1{
+    top: 51%;
+    font-size: 80px;
+    font-family: governor;
+
+}
+#cover h2{
+    top: 60%;
+    font-size: 50px;
+    font-family: studio;
+
+}
+#cover .cover-bots{
+    position: absolute;
+    bottom: 58%;
+    display: none;
+    background-color:black;
+}
+#cover #cover-bot{
+    display: block;
+    left: 50%;
+    bottom: 50%;
+    width: 112px;
+    opacity: 1;
+    animation: cover-bot 1.5s ease-in infinite alternate;
+    -moz-animation: cover-bot 1.5s ease-in infinite alternate;
+    -webkit-animation: cover-bot 1.5s ease-in infinite alternate;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+    background-color: #49ade9;
+    transform: translate(-50%,0%);
+
+}
+@keyframes cover-bot {
+    0% {opacity: 0.1}
+    100% {opacity: 1}
+}
+@-moz-keyframes cover-bot /* Firefox */
+{
+    0% {opacity: 0.1}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes cover-bot /* Safari 和 Chrome */
+{
+    0% {opacity: 0.1}
+    100% {opacity: 1}
+}
+
+@keyframes cover-bot1 {
+    0% {opacity: 0.8}
+    100% {opacity: 1}
+}
+.cover-bots-l{
+    /*transform: translate(-50%,0);*/
+}
+.cover-bots-r{
+    /*transform: translate(50%,0);*/
+}
+
+
+/* --------------------------------------------------DiscoverCover--------------------------------------------------*/
+#discoverCover{
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+#discoverCoverContainer{
+    width: 100%;
+}
+
+#discoverCoverContainer h2{
+    background-color: #327dbe;
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 50px;
+    font-family: arista;
+    text-align: center;
+    display: none;
+}
+#discoverCoverPicContainer{
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    height: 30%;
+    background-color: #327dbe;
+    display: none;
+
+}
+.discoverCoverPic{
+    position: absolute;
+    transform: translate(-50%,0);
+    top: 10%;
+    height: 80%;
+}
+#discoverCoverPic1{
+    left: 30%;
+    height: 160%;
+
+}
+#discoverCoverPic2{
+    left: 70%;
+}
+/* --------------------------------------------------DiscoverCover--------------------------------------------------*/
+
+
+
+
+
+
+
+
+/* --------------------------------------------------DiscoverMain--------------------------------------------------*/
+
+#discoverMain{
+    background-color:#327dbe ;
+    border-top: 50px solid #327dbe;
+}
+#discoverMainContainer{
+    background-color:white ;
+}
+
+#discoverMain h3{
+    position: relative;
+    margin-top: 10%;
+    left: 5%;
+    width: 90%;
+    font-size: 40px;
+    font-family: studio;
+    color: #327dbe;
+    display: none;
+}
+#discoverText1{
+    /*top: 20%;*/
+}
+#discoverText2{
+    /*top: 5%;*/
+}
+#discoverMainBody{
+    height: 90%;
+    width:100%;
+}
+#discoverMain h4{
+    position: relative;
+    margin-top: 5%;
+    /*top: 5%;*/
+    left: 10%;
+    width: 80%;
+    font-size: 30px;
+    font-family: studio;
+    display: none;
+}
+
+
+
+
+/* --------------------------------------------------DiscoverMain--------------------------------------------------*/
+
+
+/* --------------------------------------------------Clock--------------------------------------------------*/
+#clockContainer{
+    position: relative;
+    width: 100%;
+    height: 25%;
+    margin-bottom: 2%;
+    display: none;
+}
+
+#clock{
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    left: 10%;
+
+}
+#send{
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    left: 40%;
+    top:50%;
+    transform: rotate(-15deg) ;
+}
+
+svg{
+	stroke: #000;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#rim {
+  fill: none;
+  stroke: #999;
+  stroke-width: 3px;
+}
+
+.second-hand{
+	stroke-width:3;
+
+}
+
+.minute-hand{
+	stroke-width:8;
+	stroke-linecap:round;
+}
+
+.hour-hand{
+	stroke-width:12;
+	stroke-linecap:round;
+}
+
+.hands-cover{
+	stroke-width:3;
+	fill:#fff;
+}
+
+.second-tick{
+	stroke-width:3;
+	fill:#000;
+}
+
+.hour-tick{
+	stroke-width:8; //same as the miute hand
+}
+
+.second-label{
+	font-size: 12px;
+}
+
+.hour-label{
+	font-size: 24px;
+}
+/* --------------------------------------------------Clock--------------------------------------------------*/
+
+/* --------------------------------------------------Heatmap--------------------------------------------------*/
+
+#heatmap{
+    position: relative;
+    left:10%;
+    width: 80%;
+    height: 60%;
+    font-family: arista;
+    display: none;
+}
+
+/* --------------------------------------------------Heatmap--------------------------------------------------*/
+
+/* --------------------------------------------------discoverPie--------------------------------------------------*/
+#pieMain{
+    background-color: #327dbe;
+}
+#pieMainContainer{
+    background-color: white;
+    height: 100%;
+    display: none;
+}
+
+
+#pieMain h3{
+    position: absolute;
+    top: 45%;
+    left: 9%;
+    height: 30%;
+    width: 50%;
+    font-size: 30px;
+    color: black;
+    transform: translate(0,-50%);
+    font-family: studio;
+}
+#pieMain h3 b{
+    text-decoration: underline;
+}
+
+#pieMainBody{
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width:50%;
+}
+#pieMainBody #pie{
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    /*margin-top: 5%;*/
+    width: 600px;
+    height: 700px;
+    transform: translate(-50%,-50%);
+}
+#pieT2,#pieT3{
+    position: absolute;
+    top: 45%;
+    font-family: studio;
+    text-align: center;
+}
+#pieT2 b,#pieT3 b{
+    text-decoration: underline;
+    color: #327dbe;
+}
+#pieT2{
+    left: 15%;
+}
+#pieT3{
+    left: 30%;
+}
+
+
+/* --------------------------------------------------discoverPie--------------------------------------------------*/
+
+/* --------------------------------------------------map--------------------------------------------------*/
+#mapPage{
+    background-color: #327dbe;
+}
+#mapContainer{
+    background-color: white;
+}
+#mapPage h2{
+    position: relative;
+    top:10%;
+    width: 100%;
+    height: 10%;
+    font-size: 50px;
+    font-family: studio;
+    text-align: center;
+}
+#map{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    top: 10%;
+    left: 15%;
+}
+
+
+.names {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+  }
+
+    /* Tooltip CSS */
+    .d3-tip {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family:"avenir next", Arial, sans-serif;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFA500;
+    border-radius: 1px;
+    pointer-events: none;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 8px;
+      width: 100%;
+      line-height: 1.5;
+      color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      pointer-events: none;
+
+    }
+
+    /* Northward tooltips */
+    .d3-tip.n:after {
+      content: "\25BC";
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+      text-align: center;
+    }
+
+    /* Eastward tooltips */
+    .d3-tip.e:after {
+      content: "\25C0";
+      margin: -4px 0 0 0;
+      top: 50%;
+      left: -8px;
+    }
+
+    /* Southward tooltips */
+    .d3-tip.s:after {
+      content: "\25B2";
+      margin: 0 0 1px 0;
+      top: -8px;
+      left: 0;
+      text-align: center;
+    }
+
+    /* Westward tooltips */
+    .d3-tip.w:after {
+      content: "\25B6";
+      margin: -4px 0 0 -1px;
+      top: 50%;
+      left: 100%;
+    }
+
+/*    text{
+      pointer-events:none;
+    }*/
+
+    .details{
+      color:white;
+    }
+
+/* --------------------------------------------------map--------------------------------------------------*/
+
+
+/* --------------------------------------------------tree--------------------------------------------------*/
+#treePage{
+    background-color: #327dbe;
+    /*border-top: 1px solid black;*/
+    /*border-bottom: 1px solid black;*/
+}
+
+#treeContainer{
+    background-color: white;
+    height: 100%;
+    display: none;
+    /*animation: treeContainerIn 1s;*/
+
+    /*animation-play-state: paused;*/
+    /*-webkit-animation: treeContainerIn 1s;*/
+    /*-webkit-animation-play-state: paused;*/
+    /*-moz-animation: treeContainerIn 1s;*/
+    /*-moz-animation-play-state: paused;*/
+}
+#treeContainer h2{
+    position: absolute;
+    top: 5%;
+    margin-left: -30px;
+    width: 100%;
+    height: 12%;
+    text-align: center;
+    font-family: studio;
+    font-size: 45px;
+}
+@keyframes treeContainerIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-moz-keyframes treeContainerIn /* Firefox */
+{
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes treeContainerIn /* Safari 和 Chrome */
+{
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+#btndiv{
+    position: absolute;
+    top: 30%;
+    left: 59%;
+    width: 50%;
+    height: 12%;
+    font-family: studio;
+    font-size: 20px;
+}
+#btndiv .btn{
+    width: 105px;
+    cursor: pointer;
+}
+#btndiv .active{
+    text-decoration: underline;
+}
+#treebox1{
+    position: absolute;
+    width: 50%;
+    height: 85%;
+    top: 15%;
+}
+#treebox2{
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 85%;
+    top: 15%;
+
+}
+.treetitle{
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    font-family: studio;
+    font-size: 20px;
+}
+#treeTextDiv1{
+    position: absolute;
+    top: 80%;
+    width: 90%;
+    height: 30%;
+    font-family: studio;
+    font-size: 20px;
+    text-align: center;
+
+}
+#treeTextDiv2{
+    position: absolute;
+    top: 80%;
+    width: 90%;
+    height: 30%;
+    font-family: studio;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+
+#tree2{
+    position: absolute;
+    width:600px;
+    height: 600px;
+}
+#tree3{
+    position: absolute;
+    width:600px;
+    height: 600px;
+}
+
+
+
+
+
+/* --------------------------------------------------tree--------------------------------------------------*/
+
+/* --------------------------------------------------line--------------------------------------------------*/
+
+#linePage{
+    background-color: #327dbe;
+}
+
+#lineContainer{
+    background-color: white;
+    height: 100%;
+}
+#lineContainer h2{
+    position: absolute;
+    top: 21%;
+    left: 58%;
+    width: 50%;
+    height: 12%;
+    font-family: studio;
+    font-size: 45px;
+}
+#line{
+    position: absolute;
+    left: 5%;
+    top: 17%;
+    width: 50%;
+    height: 500px;
+}
+#lineTextDiv{
+    position: absolute;
+    top: 29%;
+    left: 58%;
+    width: 50%;
+    height: 30%;
+    font-family: studio;
+}
+
+#lineTextDiv h4{
+    width: 100%;
+    font-size: 30px;
+    color: #327dbe;
+}
+#lineTextDiv h4 b{
+    text-decoration: underline;
+}
+#lineT2, #lineT3{
+    position: absolute;
+    top: 42%;
+    width: 10%;
+    font-size: 25px;
+    text-align: center;
+    font-family: studio;
+    color: #327dbe;
+}
+#lineT2 b, #lineT3 b{
+    text-decoration: underline;
+}
+#lineT2{
+    left: 63%;
+}
+#lineT3{
+    left: 75%;
+}
+
+/* --------------------------------------------------line--------------------------------------------------*/
+
+/* --------------------------------------------------opPage--------------------------------------------------*/
+
+#opPage{
+    background-color: #327dbe;
+    border-top: 20px solid #327dbe;
+    border-bottom: 20px solid #327dbe;
+
+}
+
+#opContainer{
+    background-color: white;
+    height: 100%;
+}
+#opContainer h2{
+    position: absolute;
+    top: 13%;
+    width: 100%;
+    font-family: studio;
+    text-align: center;
+    font-size: 45px;
+}
+#humanbox{
+    position: absolute;
+    top: 30%;
+    left: 19%;
+    width: 500px;
+    height: 360px;
+
+}
+#botbox{
+    position: absolute;
+    top: 30%;
+    right: 19%;
+    width: 240px;
+    height: 360px;
+}
+#humanbox .humans{
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 70px;
+    height: 100px;
+}
+#botbox .bots{
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    width: 60px;
+    height: 60px;
+
+}
+#inputdiv{
+    position: absolute;
+    width: 40%;
+    height: 40px;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#choicebtn{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.left, .right{
+    position: absolute;
+    width: 180px;
+    height: 50px;
+    display: none;
+}
+.left h6, .right h6{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    top: 40%;
+    transform: translate(0,-50%);
+    font-family: SansSerif;
+    font-size: 18px;
+}
+
+#humanrate,#botrate{
+    position: absolute;
+    bottom: 0;
+    /*top: 65%;*/
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: studio;
+    font-size: 25px;
+
+}
+
+
+.left{
+    left: 6%;
+    background: url("imgs/left.png") no-repeat;
+    background-size: 100% 100%;
+}
+.right{
+    right: 6%;
+    background: url("imgs/right.png") no-repeat;
+    background-size: 100% 100%;
+
+}
+#left1,#right1{
+    top: 27%;
+}
+#left2,#right2{
+    top: 49%;
+}
+#left2, #right2{
+    height: 50px;
+}
+#left2{
+    width: 100px;
+    left: 11%;
+}
+#right2{
+    width: 110px;
+    right: 11%;
+}
+
+
+
+/* --------------------------------------------------opPage--------------------------------------------------*/
