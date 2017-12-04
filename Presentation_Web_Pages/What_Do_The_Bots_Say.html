@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>What Do The Bots Say</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="WDTBS.css">
+</head>
+<body onload="load()">
+    <div class="container-fluid">
+        <div class="row slide"  id="cover">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 slide" id="cover-container">
+                <h1>What Do The Bots Say?</h1>
+                <h2>The Power Of Social Bots</h2>
+                <img class="cover-bots cover-bots-l" id='cover-bots-l6' style="left:120px;width: 30px;" src="imgs/bot.png">
+                <img class="cover-bots cover-bots-l" id='cover-bots-l5' style="left:170px;width: 40px;" src="imgs/bot.png">
+                <img class="cover-bots cover-bots-l" id='cover-bots-l4' style="left:230px;width: 50px;" src="imgs/bot.png">
+                <img class="cover-bots cover-bots-l" id='cover-bots-l3' style="left:300px;width: 60px;" src="imgs/bot.png">
+                <img class="cover-bots cover-bots-l" id='cover-bots-l2' style="left:380px;width: 70px;" src="imgs/bot.png">
+                <img class="cover-bots cover-bots-l" id='cover-bots-l1' style="left:470px;width: 80px;" src="imgs/bot.png">
+
+                <img class="cover-bots cover-bots-r" id='cover-bots-r6' style="right:120px;width: 30px;" src="imgs/bot.png">
+                <img class="cover-bots cover-bots-r" id='cover-bots-r5' style="right:170px;width: 40px;" src="imgs/bot.png">
+                <img class="cover-bots cover-bots-r" id='cover-bots-r4' style="right:230px;width: 50px;" src="imgs/bot.png">
+                <img class="cover-bots cover-bots-r" id='cover-bots-r3' style="right:300px;width: 60px;" src="imgs/bot.png">
+                <img class="cover-bots cover-bots-r" id='cover-bots-r2' style="right:380px;width: 70px;" src="imgs/bot.png">
+                <img class="cover-bots cover-bots-r" id='cover-bots-r1' style="right:470px;width: 80px;" src="imgs/bot.png">
+                <img class="cover-bots" id="cover-bot" src="imgs/bot.png">
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row slide"  id="discoverCover">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 slide" id="discoverCoverContainer">
+                <h2>How Did We Discover That There Are Bots In The Data?</h2>
+                <div id="discoverCoverPicContainer">
+                    <img class="discoverCoverPic" id="discoverCoverPic1" src="imgs/bot.png">
+                    <img class="discoverCoverPic" id="discoverCoverPic2" src="imgs/twitter.png">
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row slide"  id="discoverMain">
+            <div class="col-md-1"></div>
+            <div class="col-md-10" id="discoverMainContainer">
+                <h3 class="discoverText" id="discoverText1">We analysed 710,637 tweets on 21/06/2016, 2 days before referendum began. We found:</h3>
+                <!--<h3 class="discoverText" id="discoverText2"></h3>-->
+                <div id="discoverMainBody">
+                    <h4 id="disT1">1. Users sent 3 times as many tweets as they were in their average.</h4>
+                    <h4 id="disT2">2. One user tweets 1417 tweets on that day, which means he/she tweeted every minute approximately.</h4>
+                    <h4 id="disT3" style="text-align: padding-left:50px; color: #327dbe; margin-top: 1.5%; font-size: 30px">(60 * 60 * 24) /1417 = 60.9</h4>
+                    <div id="clockContainer">
+                        <div id="clock"></div>
+                        <img id="send" src="imgs/colorTwitter.png">
+                    </div>
+
+                    <h4 id="disT4">3. In June 2016, 4215 new users registered. This is above the value of registration of all month in 2014, 2015, and 2016. </h4>
+                    <div id="heatmap">
+
+                    </div >
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+
+        <div class="row slide"  id="pieMain">
+            <div class="col-md-1"></div>
+            <div class="col-md-10" id="pieMainContainer">
+                <h3 class="discoverText" id="discoverText2">How many tweets were sent by <br><br> <b>Bots</b> and <b>Humans</b>  on <b>21/Jun/2016</b> ?</h3>
+                <h4 id="pieT2">HUMAN<br><br><b>480,027</b></h4>
+                <h4 id="pieT3">BOTS<br><br><b>230,610</b></h4>
+                <div id="pieMainBody">
+
+                    <div id="pie">
+
+                    </div >
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row slide"  id="mapPage">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 slide" id="mapContainer">
+                <h2>Bots Came From...</h2>
+                <div id="map"></div>
+
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row slide"  id="treePage">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 slide" id="treeContainer">
+                <h2>What did data say?</h2>
+                <!--<div id="btndiv">-->
+                    <!--<button type="button" class="btn btn-primary" id="tree-btn-all">All</button>-->
+                    <!--<button type="button" class="btn btn-primary" id="tree-btn-human">Human</button>-->
+                    <!--<button type="button" class="btn btn-primary" id="tree-btn-bot">Bots</button>-->
+                <!--</div>-->
+
+
+
+
+                <div id="treebox1">
+                    <h3 class="treetitle">HUMAN</h3>
+                    <div id="tree2"></div>
+                    <div id="treeTextDiv1">
+                        <h4 class="treeT1">Leave Tags: <b>14</b></h4>
+                        <h4 class="treeT2">Remain Tags: <b>16</b></h4>
+                        <h4 class="treeT3">Leave Tags <b><</b> Remain Tags</h4>
+                    </div>
+                </div>
+                <div id="treebox2">
+                    <h3 class="treetitle">BOTS</h3>
+                    <div id="tree3"></div>
+                    <div id="treeTextDiv2">
+                        <h4 class="treeT1">Leave Tags: <b>21</b></h4>
+                        <h4 class="treeT2">Remain Tags: <b>12</b></h4>
+                        <h4 class="treeT3">Leave Tags <b>></b> Remain Tags</h4>
+                </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+
+        <div class="row slide"  id="linePage">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 slide" id="lineContainer">
+                <h2>Sentiment Variation</h2>
+
+                <div id="lineTextDiv">
+                    <h4 id="lineT1">Compare with humans, <br>bots were <b>more expressive</b>:</h4>
+                </div>
+                <h4 id="lineT2">HUMAN<br>(std)<br><br><b>0.219</b></h4>
+                <h4 id="lineT3">BOTS<br>(std)<br><br><b>0.287</b></h4>
+                <div id="line">
+
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row slide"  id="opPage">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 slide" id="opContainer">
+                <h2>How did bots distort opinions?</h2>
+                <div id="humanbox">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-leave" src="imgs/leave.png">
+                    <img class="humans human-remain" src="imgs/remain.png">
+                    <img class="humans human-remain" src="imgs/remain.png">
+                    <img class="humans human-remain" src="imgs/remain.png">
+                    <img class="humans human-remain" src="imgs/remain.png">
+                    <img class="humans human-remain" src="imgs/remain.png">
+                    <img class="humans human-remain" src="imgs/remain.png">
+                    <img class="humans human-remain" src="imgs/remain.png">
+                    <img class="humans human-remain" src="imgs/remain.png">
+                    <h4 id="humanrate"><b>Leave:Reamin = 13:8</b></h4>
+                </div>
+                <div id="botbox">
+                    <img class="bots bot-leave" src="imgs/leave-bot.png">
+                    <img class="bots bot-leave" src="imgs/leave-bot.png">
+                    <img class="bots bot-leave" src="imgs/leave-bot.png">
+                    <img class="bots bot-leave" src="imgs/leave-bot.png">
+                    <img class="bots bot-leave" src="imgs/leave-bot.png">
+                    <img class="bots bot-leave" src="imgs/leave-bot.png">
+                    <img class="bots bot-leave" src="imgs/leave-bot.png">
+                    <img class="bots bot-remain" src="imgs/remain-bot.png">
+                    <img class="bots bot-remain" src="imgs/remain-bot.png">
+                    <h4 id="botrate"><b>Leave:Reamin = 7:2</b></h4>
+                </div>
+
+
+
+                <div class="left" id="left1" ></div>
+                <div class="left" id="left2" ></div>
+                <div class="right" id="right1" ></div>
+                <div class="right" id="right2" ></div>
+
+                <div class="input-group" id="inputdiv">
+                    <input type="text" class="form-control" placeholder="Leave Or Remain" aria-label="Product name" id="choice">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-success" type="button" id="choicebtn">Your Opinion</button>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="col-md-1"></div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/queue.v1.min.js"></script>
+    <script src="js/topojson.v1.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/data.js"></script>
+
+    <script>
+
+        function load(){
+
+            $('body,html').animate({scrollTop:0},1000);
+            w = $( window ).width()
+            h = $( window ).height()
+            if(h>=800){
+                $('.slide').css('height',h);
+                $('#discoverCover').css('height',1.2*h);
+                $('#discoverMain').css('height',2.1*h);
+            }else{
+                $('.slide').css('height',800);
+                $('#discoverCover').css('height',960);
+                $('#discoverMain').css('height',1680);
+                $('#tree2').css('width',0.7*h)
+                $('#tree2').css('width',0.7*h)
+            }
+
+            console.log(w,h)
+            if(w<1400){
+                $('#cover h1').css('font-size','60px')
+                $('#cover h2').css('font-size','45px')
+                $('#discoverCoverContainer h2').css('font-size','40px')
+                $('#discoverText2').css('font-size','25px')
+                $('#treeContainer h2').css({
+                    'font-size':'35px',
+                    'left':'65%'
+                })
+                $('#btndiv').css('left','65%')
+                $('#map').css('left','7.5%')
+                $('#treeTextDiv').css('left','65%')
+                $('#treeTextDiv h4').css('font-size','20pt')
+                $('#humanbox').css('left','15%')
+                $('#botbox').css('right','15%')
+                $('#humanrate').css('font-size','25px')
+                $('#botrate').css('font-size','25px')
+
+            }
+
+            $('#tree2').css('width',0.5*w)
+            $('#tree3').css('width',0.5*w)
+
+
+
+            $('.container-fluid').css('width',w+30)
+             //Game
+            $('#choicebtn').click(function() {
+                choice = $('#choice').val()
+                if(choice=='Leave' ||choice=='leave'){
+                    $('#left2,#right2').fadeOut()
+
+                    $('#left1').html('<h6>Leave~</h6>')
+                    $('#left1').fadeIn(800,function () {
+                        setTimeout(function () {
+                            $('#right1').html('<h6>LEAVE!!!</h6>')
+                            $('#right1').fadeIn(500)
+                        },1000)
+                    })
+
+                }else if(choice=='remain' ||choice=='Remain'){
+                    $('#left1,#right1').fadeOut()
+
+                    $('#left2').html('<h6>Remain.</h6>')
+                    $('#left2').fadeIn(800,function () {
+                        setTimeout(function () {
+                            $('#right2').html('<h6>Remain!!</h6>')
+                            $('#right2').fadeIn(500)
+                        },1000)
+                    })
+                }else{
+                    alert('Wrong Input Format')
+                }
+            })
+        }
+
+
+        $('#cover-bot').click(function() {
+            $('#cover-bot').css('animation-play-state','paused')
+            $('#cover-bot').css({
+                'animation':'cover-bot1 0.2s 1',
+                '-webkit-animation':'cover-bot1 0.2s 1',
+                '-moz-animation:':'cover-bot1 0.2s 1',
+                'opacity':'1',
+                'animation-play-state':'running',
+                'background-color':'black',
+            })
+            $('#cover-bot').animate({
+                'bottom':'58%',
+                'height':'150px',
+                'transform':'translate(-50,0)',
+            })
+            $('#cover h1').fadeIn(800, function(){
+                $('#cover h2').fadeIn(500)
+            })
+            $('#cover').css('overflow-y','auto')
+            $('body').css('overflow-y','auto')
+
+            $('.cover-bots').fadeIn(500)
+        })
+
+        var piePatternImg = new Image();
+        piePatternImg.src = piePatternSrc;
+        var bgPatternImg = new Image();
+        bgPatternImg.src = bgPatternSrc;
+        
+        //tree
+        var line = echarts.init(document.getElementById('line'));
+
+//        var tree1 = echarts.init(document.getElementById('tree1'));
+        var tree2 = echarts.init(document.getElementById('tree2'));
+        var tree3 = echarts.init(document.getElementById('tree3'));
+
+        draw_tree(tree2, human_tree)
+        draw_tree(tree3, bot_tree)
+        draw_lines(human_timeline,bot_timeline)
+
+
+
+        $(window).scroll(function(){
+            top_ = $(window).scrollTop()
+            if(top_>400){
+                $('#discoverCoverContainer h2').fadeIn(500,function(){
+                    $('#discoverCoverPicContainer').fadeIn(1000)
+                })
+            }else{}
+
+            if (top_>1.6* h){
+                $('#discoverText1').fadeIn(1000)
+
+            }else{}
+            if (top_>1.8* h){
+                $('#discoverMainBody').fadeIn(1000)
+                $('#discoverMainBody #disT1').fadeIn(1000,function () {
+                })
+                $('#discoverMainBody #disT2').fadeIn(1000,function () {
+                        $('#discoverMainBody #disT3').fadeIn(500,function () {
+                            $('#clock, #clockContainer').show()
+                            $('#send').animate({
+                                left:'80%',
+                                top:'0%',
+                                width:'20px',
+                            },60000)
+                        })
+                })
+
+            }else{}
+
+
+            if (top_>2.2* h){
+                $('#discoverMainBody #disT4').fadeIn(1000,function () {
+                        $('#heatmap').fadeIn(500,function () {
+                            heatmap()
+                        })
+
+                })
+            }else{}
+            if (top_>3.4 * h){
+                $('#pieMainContainer').fadeIn(1000,function () {
+                        pie()
+
+                })
+            }else{}
+            if (top_>4.1* h){
+                $('#treeContainer').fadeIn(1000)
+            }else{}
+
+
+
+
+        })
+
+
+
+
+        function heatmap() {
+            //Echarts
+            var heatMap = echarts.init(document.getElementById('heatmap'));
+
+            // Data
+            var hours = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            var days = ['2014','2015','2016'];
+
+            var data = [
+              [0, 0, 1958],
+              [1, 0, 2117],
+              [2, 0, 2252],
+              [0, 1, 1787],
+              [1, 1, 1810],
+              [2, 1, 2202],
+              [0, 2, 2010],
+              [1, 2, 1865],
+              [2, 2, 2514],
+              [0, 3, 2130],
+              [1, 3, 1705],
+              [2, 3, 2389],
+              [0, 4, 1846],
+              [1, 4, 1890],
+              [2, 4, 2777],
+              [0, 5, 1802],
+              [1, 5, 1699],
+              [2, 5, 4215],
+              [0, 6, 1773],
+              [1, 6, 1803],
+              [2, 6, null],
+              [0, 7, 1821],
+              [1, 7, 1755],
+              [2, 7, null],
+              [0, 8, 1863],
+              [1, 8, 1893],
+              [2, 8, null],
+              [0, 9, 1813],
+              [1, 9, 1984],
+              [2, 9, null],
+              [0, 10, 1611],
+              [1, 10, 1928],
+              [2, 10, null],
+              [0, 11, 1651],
+              [1, 11, 1780],
+              [2, 11, null]
+            ]
+            data = data.map(function (item) {
+                return [item[1], item[0], item[2] || '-'];
+            });
+
+            hmOption = {
+                tooltip: {
+                    position: 'top'
+                },
+                animation: true,
+                grid: {
+                    height: '40%',
+                    y: '10%'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: hours,
+                    splitArea: {
+                        show: true
+                    },
+                    axisLabel:{
+                        fontFamily:'studio'
+                    },
+                    axisLine:{
+                        show:false
+
+                    },
+                    axisTick:{
+                        show:false
+                    }
+                },
+                yAxis: {
+                    type: 'category',
+                    data: days,
+                    axisLabel:{
+                        fontFamily:'studio'
+                    },
+                    axisLine:{
+                        show:false
+                    },
+                    axisTick:{
+                        show:false
+                    }
+
+                },
+                visualMap: {
+                    min: 1500,
+                    max: 4215,
+                    calculable: true,
+                    orient: 'horizontal',
+                    left: 'center',
+                    bottom: '15%'
+                },
+                series: [{
+                    name: 'New Users Created',
+                    type: 'heatmap',
+                    data: data,
+                    label: {
+                        normal: {
+                            show: true
+                        }
+                    },
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)',
+                            textStyle:{
+                                fontFamily:'studio'
+                            }
+                        }
+                    }
+                }]
+            };
+
+            //使用刚指定的配置项和数据显示图表。
+            heatMap.setOption(hmOption);
+        }
+
+        function pie() {
+            // pie
+            var pie = echarts.init(document.getElementById('pie'));
+
+
+
+
+            var itemStyle = {
+                normal: {
+                    opacity: 0.7,
+                    color: {
+                        image: piePatternImg,
+                        repeat: 'repeat'
+                    },
+                    borderWidth: 3,
+                    borderColor: '#235894'
+                }
+            };
+            pieOption = {
+                series: [{
+                    name: 'pie',
+                    type: 'pie',
+                    selectedMode: 'single',
+                    selectedOffset: 30,
+                    clockwise: true,
+                    label: {
+                        normal: {
+                            textStyle: {
+                                fontSize: 18,
+                                color: '#235894',
+                                fontFamily:'studio'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            lineStyle: {
+                                color: '#235894'
+                            }
+                        }
+                    },
+                    data:[
+                        {value:480027, name:'Humans',itemStyle:{
+                            normal: {
+                                opacity: 0.7,
+                                color: {
+                                    image: piePatternImg,
+                                    repeat: 'repeat'
+                                },
+                                borderWidth: 3,
+                                borderColor: '#235894'
+                            }
+                        }},
+                        {value:230610, name:'Bots',itemStyle:{
+                            normal: {
+                            opacity: 0.7,
+                            color: {
+                                image: bgPatternImg,
+                                repeat: 'repeat'
+                            },
+                            borderWidth: 3,
+                            borderColor: '#235894'
+                        }
+                        }}
+
+                    ],
+                    itemStyle: itemStyle
+                }]
+            };
+    //
+            // 使用刚指定的配置项和数据显示图表。
+            pie.setOption(pieOption);
+        }
+
+
+
+
+
+
+
+        function draw_tree(this_tree,treeData) {
+//            tree.clear();
+//            tree.hideLoading();
+            function colorMappingChange(value) {
+                var levelOption = getLevelOption(value);
+                chart.setOption({
+                    series: [{
+                        levels: levelOption
+                    }]
+                });
+            }
+
+            var formatUtil = echarts.format;
+
+            function getLevelOption() {
+
+                return [
+                    {
+                        itemStyle: {
+                            normal: {
+                                borderColor: '#fff',
+                                borderWidth: 2,
+                                gapWidth: 3
+                            }
+                        },
+                        upperLabel: {
+                            normal: {
+                                show: false
+                            }
+                        }
+                    },
+                    {
+                        itemStyle: {
+                            normal: {
+                                borderColor: '#fff',
+                                borderWidth: 1,
+                                gapWidth: 1,
+
+                            },
+                            emphasis: {
+                                borderColor: '#ddd'
+                            }
+                        }
+                    }
+
+                ];
+            }
+
+            treeOption = {
+                tooltip: {
+                    formatter: function (info) {
+                        var value = info.value;
+                        var treePathInfo = info.treePathInfo;
+                        var treePath = [];
+
+                        for (var i = 1; i < treePathInfo.length; i++) {
+                            treePath.push(treePathInfo[i].name);
+                        }
+
+                        return [
+                            '<div class="tooltip-title">' + formatUtil.encodeHTML(treePath.join('/')) + '</div>',
+                            'Frequencies: ' + formatUtil.addCommas(value) + ' Times',
+                        ].join('');
+                    }
+                },
+
+                series: [
+                    {
+                        name: "Words' Tree Map",
+                        type: 'treemap',
+                        animation:false,
+                        breadcrumb:false,
+                        roam:false,
+                        label: {
+                            show: true,
+                            formatter: '{b}',
+                            normal:{
+                                textStyle: {
+                                    fontSize: 12,
+                                    color: 'white',
+                                    fontFamily:'governor'
+                                }
+                            }
+
+                        },
+                        upperLabel: {
+                            normal: {
+                                show: true,
+                                height: 30
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                borderColor: '#fff',
+                                color:'black'
+                            }
+                        },
+                        levels: getLevelOption(),
+                        data: treeData
+                    }
+                ]
+            }
+            this_tree.setOption(treeOption);
+        }
+
+
+        function draw_lines(humandata,botdata){
+            var dateList = humandata.map(function (item) {
+                return item[0];
+            });
+            var valueList = humandata.map(function (item) {
+                return item[1];
+            });
+            var valueList1 = botdata.map(function (item) {
+                return item[1];
+            });
+
+            lineOption = {
+                backgroundColor: {
+                    image: bgPatternImg,
+                    repeat: 'repeat'
+                },
+                // Make gradient line here
+//                visualMap: [{
+//                    show: false,
+//                    type: 'continuous',
+//                    seriesIndex: 0,
+////                    inRange: {
+////                        color: ['#121122', 'rgba(3,4,5,0.4)', 'red'],
+////                        symbolSize: [30, 100]
+////                    }
+//                }, {
+//                    show: false,
+//                    type: 'continuous',
+//                    seriesIndex: 1,
+//                    dimension: 0
+//
+//                }],
+                legend: {
+                    data:['Humans','Bots']
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                xAxis: {
+                    data: dateList,
+                    axisLabel:{
+                        interval:35,
+                        showMinLabel:true,
+                        showMaxLabel:true,
+                        fontFamily:'studio'
+                    },
+                    axisLine:{
+                        lineStyle:{
+                            width:2
+                        }
+                    },
+                    axisTick:{
+                        lineStyle:{
+                            width:2
+                        }
+                    }
+
+                },
+                yAxis: {
+                    splitLine: {show: false},
+                    axisLabel:{
+                        fontFamily:'studio',
+                        fontWeight: 10
+                    },
+                    axisLine:{
+                        lineStyle:{
+                            width:2
+                        }
+                    },
+                    axisTick:{
+                        lineStyle:{
+                            width:2
+                        }
+                    }
+                },
+
+                dataZoom: [{
+                    startValue: '00:00'
+                }, {
+                    type: 'inside'
+                }],
+                series: [{
+                    type: 'line',
+                    name:'Humans',
+                    showSymbol: false,
+                    data: valueList,
+                    itemStyle:{
+                        normal:{
+                            color:'#f0dda1'
+                        }
+                    },lineStyle:{
+                        normal:{
+                            color:'#f0dda1'
+                        }
+                    }
+                }, {
+                    type: 'line',
+                    name:'Bots',
+                    showSymbol: false,
+                    data: valueList1,
+                    itemStyle:{
+                        normal:{
+                            color:'#bb605d'
+                        }
+                    },lineStyle:{
+                        normal:{
+                            color:'#bb605d'
+                        }
+                    }
+
+                }]
+            };
+            line.setOption(lineOption)
+        }
+
+
+    </script>
+
+</body>
+</html>
