@@ -10,7 +10,7 @@ Liquan Chai, Siyao Zhou, Shuxian Liang
 .
 ├── DS4D
 │   ├── README.md
-│   └── assignment_2.ipynb
+│   └── assignment_.ipynb
 ├── cleaned_twitter
 │   ├── 2016-06-21
 │   ├── 2016-06-23
@@ -38,5 +38,8 @@ Liquan Chai, Siyao Zhou, Shuxian Liang
 **2. Cython (For Better Performance)**
 * Install cython by: 
 	*`conda install cython` or `pip install cython`*
+
+### Others:
+please unzip bot1.zip human1.zip, all_users.zip before running the project
 
 
